@@ -33,7 +33,7 @@ open class BaseCell: UITableViewCell, BaseCellType {
     public var baseRow: BaseRow! { return nil }
 
     /// Block that returns the height for this cell.
-    public var height: (() -> CGFloat)?
+    public var height: (() -> CGFloat)? = { 50 }
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
